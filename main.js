@@ -176,46 +176,44 @@ function select_vote() {
 
     let counter = 0 ;
 
-    function movers(){
-        let mover = setInterval(()=>{
-        if(counter === cloun_players.length)
-        {
+    function movers(maxLoops) {
+    let currentLoop = 0; // يحسب كم دورة خلصنا حالياً
+
+    let mover = setInterval(() => {
+        // إذا وصلنا لآخر لاعب بالدورة الحالية
+        if (counter === cloun_players.length) {
+            counter = 0;      // صفر العداد لتبدأ الدورة الجديدة من أول لاعب
+            currentLoop++;    // زيادة عدد الدورات التي انتهت
+        }
+
+        // 🎯 الشرط الحاسم: إذا خلصنا عدد الدورات المطلوبة تماماً
+        if (currentLoop === maxLoops) {
+            clearInterval(mover); // إيقاف العداد نهائياً
+            
             shadow_vote.style.display = "none";
             reveal_player.style.display = "flex";
-            counter = 0;
-            clearInterval(mover)
+            
+            // 🔥 هنا يشتغل صوت الفوز فوراً عند كشف اللاعب الأخير!
+            click_win.play(); 
+            return; // الخروج من الدالة
         }
-     else{
-         click_ul.currentTime = 0.5;
 
-    click_ul.play();
-            shadow_vote.style.display = "flex";
-            reveal_player.style.display = "none";
+        // كود تشغيل صوت النقر والتنقل بين الأسماء أثناء الدوران
+        click_ul.currentTime = 0.5;
+        click_ul.play();
+        
+        shadow_vote.style.display = "flex";
+        reveal_player.style.display = "none";
         shadow_vote.innerHTML = cloun_players[counter];
-        counter++;
-     }
-    },200)
-    }
-    movers();
-    movers();
-    movers();
-    movers();
-    movers();
-    movers();
-    movers();
-    movers();
-    movers();
-    movers();
-    movers();
-    movers();
-    movers();
-    movers();
-    movers();
-    movers();
+        
+        counter++; // الانتقال للاعب التالي
+    }, 100); // جعلت السرعة 100 ملي ثانية ليكون التدوير سريع وحماسي!
+}
 
-   setTimeout(()=>{
-     click_win.play();
-   },3000)
+// 🚀 استدعي الدالة مرة واحدة فقط وحدد عدد المرات داخل القوسين
+// مثلاً هنا رقم 4 يعني المصفوفة رح تدور 4 مرات كاملة ورا بعض وبس تخلص يشتغل الصوت
+movers(4);
+  
 
   
 
