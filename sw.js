@@ -1,12 +1,12 @@
 const CACHE_NAME = 'offline-cache-v1';
 // ضع هنا أسماء كل الملفات التي يتكون منها مشروعك ليتم حفظها للأوفلاين
 const ASSETS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/style.css',
-  '/main.js',
-  '/icon-192.png',
-  '/icon-512.png'
+  './',
+  './index.html',
+  './style.css',
+  './main.js',
+  './icon-192.png',
+  './icon-512.png'
 ];
 
 // 1. عند تثبيت التطبيق: قم بحفظ الملفات في الكاش فوراً
