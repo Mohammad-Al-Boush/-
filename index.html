@@ -7,6 +7,20 @@
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Sedgwick+Ave&display=swap" rel="stylesheet"> -->
+<!-- ربط ملف الـ Manifest -->
+<link rel="manifest" href="manifest.json">
+
+<!-- كود تفعيل السيرفس وركر لتخزين ملفات الأوفلاين -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then(reg => console.log('تم تفعيل ميزة الأوفلاين بنجاح!', reg))
+        .catch(err => console.log('حدث خطأ في التفعيل:', err));
+    });
+  }
+</script>
+
     <title>برا السالفة</title>
 </head>
 <body>
@@ -208,7 +222,7 @@
                     <button>اب تيم</button>
                     <button>اب نزار</button> -->
                 </div>
-                <button id="foucs" style="position: absolute; bottom: 100px;">تصويت</button>
+                <button id="foucs" style="position: absolute; bottom: 50px;">تصويت</button>
             </div>
         </section>
         <!-- نهاية اسأل على كيفك -->
@@ -267,7 +281,7 @@
                     <button>رز و همستر</button>
                     <button>شيش همستر</button> -->
                 </div>
-               <div id="repl" style="display: flex; gap: 10px; opacity: 0.5; pointer-events: none; position: absolute; bottom: 100px;">
+               <div id="repl" style="display: flex; gap: 10px; opacity: 0.5; pointer-events: none; position: absolute; bottom: 50px;">
                  <button id="news">اللعب مجدداً</button>
                 <button id="home">الرئيسية</button>
                </div>
