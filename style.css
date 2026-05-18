@@ -387,7 +387,7 @@ span {
 
 /* نهاية إضافة الأسماء  */
 
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   h1 {
     font-size: 30px;
     margin: 6px;
