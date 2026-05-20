@@ -395,13 +395,13 @@ span {
 }
 
 #leo{
-  color: #0d2607;
+  color: #14390a;
   text-shadow: 0 0 0 transparent;
   font-weight: 900;
   font-size: 10px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 30px;
+  right: 30px;
 }
 
 /* نهاية إضافة الأسماء  */
