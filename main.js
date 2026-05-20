@@ -89,10 +89,21 @@ function giv(index) {
       name_out.innerHTML = feak_players[feak_players.length - 1];
       show(out, choice);
 
+       if(feak_players[feak_players.length - 1] === "اب نزار" || feak_players[feak_players.length - 1] === "ابو نزار" ||feak_players[feak_players.length - 1] === "أب نزار" || feak_players[feak_players.length - 1] === "أبو نزار" || feak_players[feak_players.length - 1] === "tiger" || feak_players[feak_players.length - 1] === "Tiger"){
+          document.getElementById("leo").innerHTML = cata[topic][random_topic];
+        
+        }
+        else{
+          
+          document.getElementById("leo").innerHTML ="";
+        }
       if (index === random_player) {
+         
         name_out_player.innerHTML = "انت يلي برا السالفة يا غالي";
         ran_payer = feak_players[feak_players.length - 1];
         random_player = undefined;
+         
+     
       } else {
         if (random_player === undefined) {
           random_player === undefined;
@@ -525,7 +536,6 @@ homee.forEach((btn)=>{
         setTimeout(()=>{window.location.reload()},800)
     }); 
 });
-
 
 
 
