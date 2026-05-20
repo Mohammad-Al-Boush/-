@@ -394,6 +394,16 @@ span {
   translate: 0 -5px;
 }
 
+#leo{
+  color: #0d2607;
+  text-shadow: 0 0 0 transparent;
+  font-weight: 900;
+  font-size: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 /* نهاية إضافة الأسماء  */
 
 @media (max-width:667px) {
