@@ -402,6 +402,7 @@ span {
   position: absolute;
   top: 30px;
   right: 30px;
+  opacity:0;
 }
 
 /* نهاية إضافة الأسماء  */
